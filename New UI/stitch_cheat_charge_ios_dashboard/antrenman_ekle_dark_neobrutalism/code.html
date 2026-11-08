@@ -1,0 +1,245 @@
+<!DOCTYPE html><html class="dark" lang="tr" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Cheat &amp; Charge - Antrenman Ekle</title>
+<!-- Fonts: Space Grotesk & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            volt: '#CCFF00',
+            carbon: {
+              900: '#0C0E12',
+              800: '#14161C',
+              700: '#1C1F26',
+              600: '#262A34'
+            },
+            fire: '#FF5500'
+          },
+          fontFamily: {
+            display: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['"Inter"', 'sans-serif']
+          },
+          boxShadow: {
+            'brutal-sm': '2px 2px 0px #000000',
+            'brutal': '4px 4px 0px #000000',
+            'brutal-lg': '6px 6px 0px #000000',
+            'brutal-volt': '3px 3px 0px #CCFF00',
+            'brutal-white': '3px 3px 0px #FFFFFF'
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styles -->
+<style data-purpose="background-pattern">
+    /* Subtle dot grid pattern for technical neobrutalist vibe */
+    .bg-dot-grid {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+  </style>
+<style data-purpose="scrollbar-and-ios-tweaks">
+    /* Hide scrollbars for clean mobile app feel */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    * {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+<!-- END: Custom Styles -->
+</head>
+<body class="bg-[#08090b] text-white font-sans antialiased min-h-screen flex justify-center items-center p-0 sm:p-4">
+<!-- BEGIN: MobileDeviceFrame -->
+<!-- Constrained container replicating iOS viewport (393px width) -->
+<div class="relative w-full max-w-[393px] h-[852px] max-h-[852px] bg-carbon-900 border-2 border-white rounded-[44px] flex flex-col justify-between overflow-hidden shadow-2xl bg-dot-grid select-none" data-purpose="ios-container" style="background-image: radial-gradient(rgba(255, 255, 255, 0.18) 1.5px, transparent 1.5px); background-size: 20px 20px; background-color: rgb(12, 14, 18);">
+<!-- Top Status Bar & Handle Layer -->
+<div class="w-full pt-3 px-6 flex flex-col items-center shrink-0 z-20">
+<!-- Sheet Pull Handle Indicator -->
+<div class="w-12 h-1.5 bg-white/30 rounded-full mb-3" data-purpose="bottom-sheet-handle"></div>
+<!-- iOS Native Status Bar Mockup -->
+<div class="w-full flex justify-between items-center text-xs font-semibold text-white/80 pb-2">
+<span class="tracking-tight text-sm font-display">11:39</span>
+<div class="flex items-center gap-1.5">
+<!-- Cell Signal -->
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9z" opacity="0.3"></path><path d="M12 6a6 6 0 00-6 6c0 1.48.54 2.84 1.44 3.9L12 19l4.56-3.1C17.46 14.84 18 13.48 18 12a6 6 0 00-6-6z" opacity="0.6"></path><circle cx="12" cy="12" r="2.5"></circle></svg>
+<!-- Wifi -->
+<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 4C7.31 4 3.07 5.9 0 8.98L12 21 24 8.98A16.88 16.88 0 0012 4zm0 3.5c3.6 0 6.9 1.4 9.3 3.8L12 19.3 2.7 11.3C5.1 8.9 8.4 7.5 12 7.5z"></path></svg>
+<!-- Battery Pill -->
+<div class="flex items-center gap-0.5 border border-white/60 rounded-md px-1 py-0.5 text-[10px] font-mono leading-none">
+<span class="">63</span>
+<div class="w-1.5 h-2 bg-volt rounded-sm ml-0.5"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- BEGIN: ModalHeader -->
+<!-- Sticky top bar with Cancel, Title, and Save CTA -->
+<header class="w-full px-5 py-3 border-b-2 border-white/10 flex items-center justify-between shrink-0 bg-carbon-900/90 backdrop-blur-md z-10" data-purpose="modal-header">
+<!-- Cancel action -->
+<button class="text-sm font-semibold text-white/70 hover:text-white px-2.5 py-1.5 rounded-lg border border-transparent hover:border-white/20 transition-all active:scale-95" type="button">
+        Cancel</button>
+<!-- Center Title with Neobrutal flair -->
+<div class="flex items-center gap-1.5">
+<span class="inline-block w-2 h-2 rounded-full bg-volt animate-pulse"></span>
+<h1 class="font-display font-extrabold text-base tracking-wide text-white">ADD CHARGE</h1>
+</div>
+<!-- Quick Save Action Badge -->
+
+</header>
+<!-- END: ModalHeader -->
+<!-- BEGIN: FormContent -->
+<main class="flex-1 overflow-hidden px-4 py-3 space-y-3.5 flex flex-col" data-purpose="form-body">
+<!-- SECTION 1: ANTRENMAN TÜRÜ -->
+<section class="space-y-2" data-purpose="workout-type-group">
+<div class="flex justify-between items-center px-1">
+<label class="font-display text-[11px] font-black uppercase tracking-widest text-white/60">
+            workout type</label>
+
+</div>
+<!-- Main Card Selector -->
+<div class="bg-carbon-800 border-2 border-white rounded-2xl p-4 shadow-brutal transition-all">
+<div class="flex items-center justify-between mb-3.5">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-xl bg-volt/10 border border-volt/30 flex items-center justify-center text-volt font-bold text-base">
+                🏃
+              </div>
+<div>
+
+<div class="font-display font-bold text-white text-base leading-tight">Outdoor Running</div>
+</div>
+</div>
+<!-- Active Dropdown Pill -->
+<button class="bg-carbon-700 hover:bg-carbon-600 border border-white/30 text-volt text-xs font-display font-bold px-3 py-1.5 rounded-xl flex items-center gap-1.5 active:scale-95">
+<span class="">Run</span>
+<svg class="w-3.5 h-3.5 text-volt" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M8 9l4-4 4 4m0 6l-4 4-4-4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+</svg>
+</button>
+</div>
+<!-- Quick Select Workout Type Chips -->
+<div class="grid grid-cols-4 gap-2 pt-1 border-t border-white/10" data-purpose="quick-workout-chips">
+<button class="flex flex-col items-center py-2 px-1 bg-volt text-black rounded-xl border border-white font-display font-bold text-xs shadow-sm">
+<span class="text-sm">🏃</span>
+<span class="mt-0.5 text-[11px]">Run</span>
+</button>
+<button class="flex flex-col items-center py-2 px-1 bg-carbon-700 hover:bg-carbon-600 text-white/90 rounded-xl border border-white/20 font-display font-semibold text-xs transition-colors">
+<span class="text-sm">🏋️</span>
+<span class="mt-0.5 text-[11px]">Weight</span>
+</button>
+<button class="flex flex-col items-center py-2 px-1 bg-carbon-700 hover:bg-carbon-600 text-white/90 rounded-xl border border-white/20 font-display font-semibold text-xs transition-colors">
+<span class="text-sm">🚴</span>
+<span class="mt-0.5 text-[11px]">Bicycle</span>
+</button>
+<button class="flex flex-col items-center py-2 px-1 bg-carbon-700 hover:bg-carbon-600 text-white/90 rounded-xl border border-white/20 font-display font-semibold text-xs transition-colors">
+<span class="text-sm">🏊</span>
+<span class="mt-0.5 text-[11px]">Swim</span>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 2: YAKILAN KALORİ -->
+<section class="space-y-2" data-purpose="calories-burned-group">
+<div class="flex justify-between items-center px-1">
+<label class="font-display text-[11px] font-black uppercase tracking-widest text-white/60">
+            Burned calorıe</label>
+<span class="text-[10px] font-mono text-fire flex items-center gap-1 font-bold">
+<span class="">🔥</span>ACTIVE FUEL</span>
+</div>
+<div class="bg-carbon-800 border-2 border-white rounded-2xl p-4 shadow-brutal space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex-1">
+
+<div class="relative flex items-center">
+<input class="w-full bg-transparent font-display font-black text-3xl text-white tracking-tight border-none p-0 focus:ring-0 focus:outline-none placeholder:text-white/20" placeholder="Örn: 450" type="number" value="520">
+</div>
+</div>
+<!-- Unit Badge -->
+<div class="bg-fire/15 border-2 border-fire px-3.5 py-1.5 rounded-xl flex items-center gap-1.5 shadow-sm">
+<span class="text-xs">🔥</span>
+<span class="font-display font-black text-fire text-sm tracking-wider">KCAL</span>
+</div>
+</div>
+<!-- Quick Calorie Presets Chips -->
+
+</div>
+</section>
+<!-- SECTION 3: ZAMAN & TARİH -->
+<section class="space-y-2" data-purpose="date-time-group">
+<label class="font-display text-[11px] font-black uppercase tracking-widest text-white/60 px-1 block">
+          date &amp; tıme</label>
+<div class="bg-carbon-800 border-2 border-white rounded-2xl p-4 shadow-brutal space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2.5 h-2.5 rounded-sm bg-white rotate-45"></div>
+<span class="font-display font-bold text-sm text-white">DATE &amp; TIME</span>
+</div>
+<!-- Date & Time Neobrutalist Badges -->
+<div class="flex items-center gap-2">
+<!-- Date Picker Button -->
+<button class="bg-carbon-700 hover:bg-carbon-600 active:bg-carbon-900 border border-white/40 hover:border-white px-3 py-1.5 rounded-xl text-xs font-mono font-bold text-white shadow-sm flex items-center gap-1.5" type="button">
+<span class="">📅</span>
+<span class="">15 Oct 2026</span>
+</button>
+<!-- Time Picker Button -->
+<button class="bg-carbon-700 hover:bg-carbon-600 active:bg-carbon-900 border border-white/40 hover:border-white px-3 py-1.5 rounded-xl text-xs font-mono font-bold text-volt shadow-sm" type="button">
+                11:39
+              </button>
+</div>
+</div>
+<!-- Note regarding week limit -->
+<div class="flex items-start gap-2 pt-2 border-t border-white/10 text-white/50 text-[11px] leading-snug">
+<svg class="w-3.5 h-3.5 text-volt shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+<p class="">Only workouts from the current week can be added retroactively.</p>
+</div>
+</div>
+</section>
+<!-- SECTION 4: CHEAT & CHARGE KAZANIMI (App Value Prop Card) -->
+
+</main>
+<!-- END: FormContent -->
+<!-- BEGIN: BottomActionSection -->
+<!-- Sticky bottom CTA with iOS Home Bar -->
+<footer class="px-4 pt-3 pb-5 bg-carbon-900 border-t-2 border-white/10 shrink-0 space-y-2.5" data-purpose="footer-actions">
+<!-- Main Action Button -->
+<button class="w-full py-4 px-6 bg-volt hover:bg-[#b8e600] active:translate-x-1 active:translate-y-1 active:shadow-none text-black font-display font-black text-sm tracking-wider uppercase rounded-2xl border-2 border-white shadow-brutal flex items-center justify-center gap-2 transition-all cursor-pointer" data-purpose="submit-workout-button" type="button">
+<span class="">SAVE THE WORKOUT</span>
+<svg class="w-4 h-4 text-black stroke-[3]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<!-- iOS Home Indicator -->
+<div class="w-full flex justify-center pt-1" data-purpose="ios-home-indicator">
+<div class="w-32 h-1 bg-white/40 rounded-full"></div>
+</div>
+</footer>
+<!-- END: BottomActionSection -->
+</div>
+<!-- END: MobileDeviceFrame -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
